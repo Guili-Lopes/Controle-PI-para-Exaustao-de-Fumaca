@@ -1,0 +1,253 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f6af1ab3-3344-4d4b-8823-432e23ec3b82")
+	(paper "A4")
+	(title_block
+		(title "Sistema de Controle PI de Exaustão de Fumaça")
+		(date "2026-11-09")
+		(rev "V1")
+		(company "UFCI-MG")
+		(comment 1 "Disciplina: Fundamentos de Microcontroladores")
+		(comment 2 "Microcontrolador: PIC18F4550")
+		(comment 3 "Guilherme Lopes, Gabriel Araujo, Joao Manoel e Yan Pacheco")
+		(comment 4 "Referência: XM118 RevC — Exsto")
+	)
+	(lib_symbols)
+	(sheet
+		(at 115.57 24.13)
+		(size 64.77 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "539d5635-cb97-471c-80d0-3f3eca1f3208")
+		(property "Sheetname" "Alimentação"
+			(at 115.57 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Alimentação.kicad_sch"
+			(at 115.57 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Micro"
+				(path "/f6af1ab3-3344-4d4b-8823-432e23ec3b82"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 24.13)
+		(size 64.77 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "846b8953-a684-4472-be15-b4da21277a95")
+		(property "Sheetname" "Microcontrolador"
+			(at 24.13 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Microcontrolador.kicad_sch"
+			(at 24.13 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Micro"
+				(path "/f6af1ab3-3344-4d4b-8823-432e23ec3b82"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 208.28 24.13)
+		(size 64.77 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9437b402-57fc-4e9a-9eb6-f37bb570f460")
+		(property "Sheetname" "Entradas Analógicas"
+			(at 208.28 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Entradas Analógicas.kicad_sch"
+			(at 208.28 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Micro"
+				(path "/f6af1ab3-3344-4d4b-8823-432e23ec3b82"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 111.76)
+		(size 64.77 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b76c5385-8430-4b4a-b183-a46308687aed")
+		(property "Sheetname" "FAN e RPM e Sinalização (página 5)"
+			(at 25.4 111.0484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FAN e RPM.kicad_sch"
+			(at 25.4 150.4446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Micro"
+				(path "/f6af1ab3-3344-4d4b-8823-432e23ec3b82"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115.57 111.76)
+		(size 64.77 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ce672e90-3800-414b-bc84-35d9cc27fc85")
+		(property "Sheetname" "Interface LCD"
+			(at 115.57 111.0484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Interface LCD.kicad_sch"
+			(at 115.57 149.1746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Micro"
+				(path "/f6af1ab3-3344-4d4b-8823-432e23ec3b82"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
