@@ -39,7 +39,7 @@
 */
 
 
-
+#include <stdbool.h>
 #include <stdint.h>
 #include <xc.h>
 
@@ -90,9 +90,9 @@
 #define SENSOR_IO TRISAbits.TRISA1          // AN1: entrada analogica (MQ-2)
 
 // ADCON0: os bits CHS selecionam o canal; ADON=1 mantem ADC ligado.
-#define ADC_POT_CONFIG    0b00000001        // CHS=0000 -> AN0; ADON=1
+#define ADC_POT_CONFIG 0b00000001           // CHS=0000 -> AN0; ADON=1
 #define ADC_SENSOR_CONFIG 0b00000101        // CHS=0001 -> AN1; ADON=1
-#define ADC_GO_MASK       0b00000010        // GO/DONE: inicia/conclui conversao
+#define ADC_GO_MASK 0b00000010              // GO/DONE: inicia/conclui conversao
 #define TACOGRAFO_IO TRISCbits.TRISC0       // RC0/T13CKI, entrada de pulsos
 #define TACOGRAFO_PINO PORTCbits.RC0        // Apenas leitura digital
 #define FAN_IO TRISCbits.TRISC2             // RC2/CCP1, saida PWM
@@ -106,14 +106,16 @@
 #define LCD_RW LATEbits.LATE2       // RE2: 0=escrita, 1=leitura
 
 // Sinalização de nível alto de fumaça com buzzer e LED
-#define LED_IO         TRISBbits.TRISB4     // RB4 como saída digital
-#define LED_LATCH      LATBbits.LATB4
-#define BUZZER_IO      TRISBbits.TRISB5     // RB5 como saída digital
-#define BUZZER_LATCH   LATBbits.LATB5
-#define BUZZER_ON      0b1
-#define BUZZER_OFF     0b0
-#define LED_ON         0b0
-#define LED_OFF        0b1
+#define LED_IO TRISBbits.TRISB4         // RB4 como saída digital
+#define LED_LATCH LATBbits.LATB4
+#define BUZZER_IO TRISBbits.TRISB5     // RB5 como saída digital
+#define BUZZER_LATCH LATBbits.LATB5
+#define BUZZER_ON 0b1
+#define BUZZER_OFF 0b0
+#define LED_ON 0b0
+#define LED_OFF 0b1
+
+#define ALARM_VALUE 600u    // Valor de referência do sensor MQ-2 para acionar o alarme (LED e buzzer)
 
 
 
@@ -138,9 +140,12 @@ void interrupt process_interrupts(void);            // ISR de Timer0
 void calculate_pi(void);                            // Função responsável por realziar o controle PI
 void calculate_rpm(void);                           // Função responsável por calcular o RPM da ventoinha
 
-void config_lcd(void);                              // Função responsável por configurar o LCD
-void write_lcd(void);                               // Funcao futura: atualizar o LCD
-void lcd_send_command(uint8_t command);             // Envia instrucao ao HD44780
+void config_lcd(void);                                      // Função responsável por configurar o LCD
+void write_lcd(void);                                       // Escrever os dados no LCD
+void lcd_write_text(const char *text);                      // Escreve uma string de caracteres no LCD
+void lcd_write_number(uint16_t value, uint8_t digits);      // Escreve um numero decimal no LCD com quantidade fixa de digitos
+void lcd_send_command(uint8_t command);                     // Envia instrucao ao LCD
+void lcd_send_data(uint8_t data) ;                          // Envia dados ao LCD
 
 
 
@@ -201,6 +206,14 @@ void main(void) {
         if (flag_lcd) {     // Verifica se a flag de atualizacao do LCD foi acionada
             flag_lcd = false;       // Limpa a flag de atualizacao do LCD
             write_lcd();            // Chama a funcao de atualizacao do LCD
+        }
+
+        if(sensor_value >= ALARM_VALUE) {   // Verifica se o valor do sensor ultrapassou o limite de alarme
+            LED_LATCH = LED_ON;         // Aciona o LED de alarme
+            BUZZER_LATCH = BUZZER_ON;   // Aciona o buzzer de alarme
+        } else {
+            LED_LATCH = LED_OFF;        // Desliga o LED de alarme
+            BUZZER_LATCH = BUZZER_OFF;  // Desliga o buzzer de alarme
         }
 
     }
@@ -297,36 +310,36 @@ void config_timers(void) {
     // T0CON = 0b10000010: TMR0ON=1, T08BIT=0 (16 bits)
     // T0CS=0 (clock interno), PSA=0 (prescaler habilitado)
     // T0PS=010 (1:8). O timer so sera ligado apos configurar LCD
-    T0CON = 0b10000010;
     TMR0H = TIMER0_HIGH;
     TMR0L = TIMER0_LOW;
+    T0CON = 0b10000010;
 }
 
 //--------------------------------------
 // Inicializacao do LCD 16x2
 //--------------------------------------
 void config_lcd(void) {
-    LCD_RS = 0b0;  // Comandos, nao caracteres
-    LCD_RW = 0b0;  // Modo escrita
-    LCD_EN = 0b0;  // Enable inativo
+
+    LCD_RS = 0b0;   // Comandos, nao caracteres
+    LCD_RW = 0b0;   // Modo escrita
+    LCD_EN = 0b0;   // Enable inativo
+
+    __delay_ms(20);
 
     // Sequencia de sincronizacao para modo de dados de 8 bits
     lcd_send_command(0b00110000);
-    for (volatile unsigned int i = 0; i < 1923; i++);   // Delay de 5ms
+    __delay_ms(5);
 
     lcd_send_command(0b00110000);
-    for (volatile unsigned int i = 0; i < 385; i++);    // Delay de 1ms
+    __delay_us(150);
 
     lcd_send_command(0b00110000);
-    for (volatile unsigned int i = 0; i < 385; i++);    // Delay de 1ms
 
-    lcd_send_command(0b00111000); // 8 bits, 2 linhas, caracteres 5x8
-    lcd_send_command(0b00001000); // Display desligado durante configuracao
-    lcd_send_command(0b00000001); // Limpa todo o display
-    for (volatile unsigned int i = 0; i < 769; i++);     // Delay de 2ms
-
-    lcd_send_command(0b00000110); // Incrementa cursor, sem deslocar display
-    lcd_send_command(0b00001100); // Display ligado, cursor e piscagem desligados
+    lcd_send_command(0b00111000);       // 8 birs, 2 linhas, caracteres 5x8
+    lcd_send_command(0b00001000);       // Display desligado durante a configuracao
+    lcd_send_command(0b00000001);       // Limpa display
+    lcd_send_command(0b00000110);       // Incrementa cursor, sem deslocar display
+    lcd_send_command(0b00001100);       // Display ligado, cursosr e piscagem desligados
 }
 
 //--------------------------------------
@@ -447,6 +460,10 @@ void calculate_pi(void) {
     // PWM base de 50% + correcao do PI
     control_output = 0.5f + integral + proportional;
 
+    // Saturacao do PWM entre 0% e 100%
+    if (control_output > 1.0f) control_output = 1.0f;
+    if (control_output < 0.0f) control_output = 0.0f;
+
     pwm_duty_cycle = (uint16_t)(control_output * PWM_MAX); // Conversão para duty cycle do PWM
 }   
 
@@ -476,29 +493,120 @@ void calculate_rpm(void) {
 // Atualizando o duty cycle do PWM
 //--------------------------------------
 void set_pwm_duty_cycle(void) {
+    // Limita o duty cycle ao valor maximo permitido
+    if (pwm_duty_cycle > PWM_MAX) pwm_duty_cycle = PWM_MAX;
 
+    // Armazena os 8 bits mais significativos do duty
+    CCPR1L = (uint8_t)(pwm_duty_cycle >> 2);
+
+    // Armazena os 2 bits menos significativos
+    // nos bits 5 e 4 do CCP1CON
+    // Preserva os demais bits do registrador
+    CCP1CON = (CCP1CON & 0b11001111) | ((pwm_duty_cycle & 0b00000011) << 4);
 }
 
 //--------------------------------------
 // Envio de comando (RS=0) ao LCD
 //--------------------------------------
+
 void lcd_send_command(uint8_t command) {
-    LCD_RS    = 0b0;
-    LCD_RW    = 0b0;
 
-    LCD_DATA = command;
-    for (volatile unsigned int i = 0; i < 385; i++);     // Estabiliza dados antes do pulso de enable (Delay de 1ms)
+    LCD_RS = 0b0;       // Modo comando
+    LCD_RW = 0b0;       // Modo escrita
 
-    LCD_EN = 0b1;
-    for (volatile unsigned int i = 0; i < 385; i++);;    // Pulso de habilitacao (Delay de 1ms)
+    LCD_DATA = command; // Envia comando ao LATD
 
-    LCD_EN = 0b0;
-    for (volatile unsigned int i = 0; i < 19230; i++);;  // Tempo para instrucoes usuais do HD44780 (Delay de 50ms)
+    __delay_us(1);      // Estabilizacao dos sinais
+
+    LCD_EN = 0b1;       // Inicia pulso de habilitacao
+    __delay_us(1);
+    LCD_EN = 0b0;       // Finaliza pulso
+
+    // Comandos de limpar e retornar o cursor
+    if (command == 0b00000001 || command == 0b00000010) {
+        __delay_ms(2);
+    }
+    else {
+        __delay_us(50);
+    }
+}
+
+//--------------------------------------
+// Envio de dado ao LCD
+//--------------------------------------
+void lcd_send_data(uint8_t data) {
+
+    LCD_RS = 0b1;       // RS = 1: envio de caractere
+    LCD_RW = 0b0;       // RW = 0: escrita no LCD
+
+    LCD_DATA = data;    // Escreve os 8 bits no LATD
+
+    __delay_us(1);     // Estabilizacao dos dados(Delay de 1ms)
+
+    LCD_EN = 0b1;       // Inicia pulso de habilitacao
+    __delay_us(1);     // Pulso de habilitacao (Delay de 1ms)
+    LCD_EN = 0b0;       // Finaliza pulso
+
+    __delay_us(50);   // Aguarda o processamento do LCD
+}
+
+
+//--------------------------------------
+// Escreve uma string de caracteres no LCD
+//--------------------------------------
+void lcd_write_text(const char *text) {
+
+    while (*text != '\0') {
+        lcd_send_data((uint8_t)*text);
+        text++;
+    }
+}
+
+//--------------------------------------
+//      Escreve um numero decimal 
+//  no LCD com quantidade fixa de digitos
+//--------------------------------------
+void lcd_write_number(uint16_t value, uint8_t digits) {
+
+    uint16_t divisor = 1;
+
+    for (uint8_t i = 1; i < digits; i++) {
+        divisor *= 10;
+    }
+
+    while (divisor > 0) {
+        lcd_send_data((uint8_t)('0' + (value / divisor) % 10));
+
+        divisor /= 10;
+    }
 }
 
 //--------------------------------------
 // Escreve os dados no LCD
 //--------------------------------------
+
 void write_lcd(void) {
 
+    uint8_t pwm_percent;
+
+    // Converte o duty cycle para porcentagem
+    pwm_percent = (uint8_t)(pwm_duty_cycle / 8u);
+
+    // PRIMEIRA LINHA: referencia e sensor MQ-2
+    lcd_send_command(0b10000000);
+
+    lcd_write_text("REF:");
+    lcd_write_number(setpoint, 4);
+
+    lcd_write_text(" MQ:");
+    lcd_write_number(sensor_value, 4);
+
+    // SEGUNDA LINHA: PWM e RPM
+    lcd_send_command(0b11000000);
+
+    lcd_write_text("PWM:");
+    lcd_write_number(pwm_percent, 3);
+
+    lcd_write_text("% R:");
+    lcd_write_number(rpm, 5);
 }
