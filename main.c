@@ -117,6 +117,10 @@
 
 #define ALARM_VALUE 600u    // Valor de referência do sensor MQ-2 para acionar o alarme (LED e buzzer)
 
+/* PARA SIMULAR NO PICSIMLAB DESCOMENTAR
+#define MOTOR_IN1 LATBbits.LATB0
+#define MOTOR_IN2 LATBbits.LATB1
+*/
 
 
 /*=========================
@@ -230,6 +234,13 @@ void main(void) {
 // Inicializacao geral dos registradores
 //--------------------------------------
 void config_regs(void) {
+
+    /* DESCOMENTAR PARA SIMULAR NO PICSIMLAB
+    // Define o sentido fixo do motor virtual
+    MOTOR_IN1 = 0b1;
+    MOTOR_IN2 = 0b0;
+    */
+
     // Desabilita os comparadores analogicos
     CMCON = 0b00000111;
 
@@ -241,6 +252,9 @@ void config_regs(void) {
     // TRIS: 1 = entrada, 0 = saida
     TRISA = 0b00111111;       // RA0 e RA1 como entradas analogicas
     TRISB = 0b11001111;       // RB4: LED; RB5: buzzer
+
+    // TRISB = 0b11001100;    // DESCOMENTAR PARA SIMULAR NO PICSIMLAB: RB0 e RB1 como saidas do motor virtual
+
     TRISC = 0b11111011;       // RC0: tacografo; RC2: PWM da ventoinha
     TRISD = 0b00000000;       // RD0-RD7: dados do LCD
     TRISE = 0b00000000;       // RE0: RS; RE1: EN; RE2: RW
