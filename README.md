@@ -204,7 +204,8 @@ Os estudos em **MATLAB** e **Simulink** apresentam comparações do comportament
 
 ```text
 Controle-PI-para-Exaustao-de-Fumaca/
-├── main.c
+├── Firmware
+│   └── main.c
 ├── Esquemático_KiCad/
 │   ├── Micro.kicad_pro
 │   ├── Micro.kicad_sch
@@ -224,7 +225,7 @@ Controle-PI-para-Exaustao-de-Fumaca/
 
 **Arquivos e materiais:**
 
-- [Firmware `main.c`](main.c)
+- [Firmware `main.c`](Firmware/main.c)
 - [Esquemático completo em PDF](Esquem%C3%A1tico_KiCad/Esquem%C3%A1tico.pdf)
 - [Projeto KiCad](Esquem%C3%A1tico_KiCad/)
 - [Placa configurada no PICSimLab](Placa%20PICSimLab/Board.pzw)
