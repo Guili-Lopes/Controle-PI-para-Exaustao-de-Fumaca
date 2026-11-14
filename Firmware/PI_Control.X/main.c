@@ -117,10 +117,6 @@
 
 #define ALARM_VALUE 600u    // Valor de referência do sensor MQ-2 para acionar o alarme (LED e buzzer)
 
-/* PARA SIMULAR NO PICSIMLAB DESCOMENTAR
-#define MOTOR_IN1 LATBbits.LATB0
-#define MOTOR_IN2 LATBbits.LATB1
-*/
 
 
 /*=========================
@@ -139,7 +135,7 @@ void set_pwm_duty_cycle(void);                      // Função responsável por
 void config_timers(void);                           // Função responsável por configurar os timers
 
 void config_interrupts(void);                       // Função responsável por configurar as interrupções
-void interrupt process_interrupts(void);            // ISR de Timer0
+void __interrupt() process_interrupts(void);            // ISR de Timer0
 
 void calculate_pi(void);                            // Função responsável por realziar o controle PI
 void calculate_rpm(void);                           // Função responsável por calcular o RPM da ventoinha
@@ -234,13 +230,6 @@ void main(void) {
 // Inicializacao geral dos registradores
 //--------------------------------------
 void config_regs(void) {
-
-    /* DESCOMENTAR PARA SIMULAR NO PICSIMLAB
-    // Define o sentido fixo do motor virtual
-    MOTOR_IN1 = 0b1;
-    MOTOR_IN2 = 0b0;
-    */
-
     // Desabilita os comparadores analogicos
     CMCON = 0b00000111;
 
@@ -252,9 +241,6 @@ void config_regs(void) {
     // TRIS: 1 = entrada, 0 = saida
     TRISA = 0b00111111;       // RA0 e RA1 como entradas analogicas
     TRISB = 0b11001111;       // RB4: LED; RB5: buzzer
-
-    // TRISB = 0b11001100;    // DESCOMENTAR PARA SIMULAR NO PICSIMLAB: RB0 e RB1 como saidas do motor virtual
-
     TRISC = 0b11111011;       // RC0: tacografo; RC2: PWM da ventoinha
     TRISD = 0b00000000;       // RD0-RD7: dados do LCD
     TRISE = 0b00000000;       // RE0: RS; RE1: EN; RE2: RW
@@ -352,6 +338,7 @@ void config_lcd(void) {
     lcd_send_command(0b00111000);       // 8 birs, 2 linhas, caracteres 5x8
     lcd_send_command(0b00001000);       // Display desligado durante a configuracao
     lcd_send_command(0b00000001);       // Limpa display
+    __delay_ms(2);
     lcd_send_command(0b00000110);       // Incrementa cursor, sem deslocar display
     lcd_send_command(0b00001100);       // Display ligado, cursosr e piscagem desligados
 }
@@ -388,7 +375,7 @@ void read_adc(void) {
     sensor_value = read_adc_channel(ADC_SENSOR_CONFIG);
 
     // Calcula o erro bruto entre as leituras
-    error = setpoint - sensor_value;
+    error = (int16_t)setpoint - (int16_t)sensor_value;
     error = (error > 1023) ? 1023 : error;          // Limita o erro a 10 bits
     error = (error < -1023) ? -1023 : error;        // Limita o erro a 10 bits
     error_norm = (float)error / (float)ADC_MAX;     // Normaliza o erro para -1.0 a +1.0
@@ -412,7 +399,7 @@ uint16_t read_adc_channel(uint8_t adc_config) {
 //--------------------------------------
 // Tratando interrupções
 //--------------------------------------
-void interrupt process_interrupts(void) {
+void __interrupt() process_interrupts(void) {
 
     // Contadores das interrupcoes do Timer0
     static uint8_t ticks_pi = 0;
@@ -516,7 +503,9 @@ void set_pwm_duty_cycle(void) {
     // Armazena os 2 bits menos significativos
     // nos bits 5 e 4 do CCP1CON
     // Preserva os demais bits do registrador
-    CCP1CON = (CCP1CON & 0b11001111) | ((pwm_duty_cycle & 0b00000011) << 4);
+    
+    
+    CCP1CON = (uint8_t)((CCP1CON & 0b11001111) | ((pwm_duty_cycle & 0b00000011) << 4));
 }
 
 //--------------------------------------
@@ -536,13 +525,7 @@ void lcd_send_command(uint8_t command) {
     __delay_us(1);
     LCD_EN = 0b0;       // Finaliza pulso
 
-    // Comandos de limpar e retornar o cursor
-    if (command == 0b00000001 || command == 0b00000010) {
-        __delay_ms(2);
-    }
-    else {
-        __delay_us(50);
-    }
+    __delay_us(50); // Comandos usuais; Clear recebe espera em config_lcd
 }
 
 //--------------------------------------
@@ -583,13 +566,17 @@ void lcd_write_text(const char *text) {
 void lcd_write_number(uint16_t value, uint8_t digits) {
 
     uint16_t divisor = 1;
+    uint8_t digit;
+    char character;
 
     for (uint8_t i = 1; i < digits; i++) {
         divisor *= 10;
     }
 
     while (divisor > 0) {
-        lcd_send_data((uint8_t)('0' + (value / divisor) % 10));
+        digit = (uint8_t)((value / divisor) % 10);
+        character = (char)('0' + digit);
+        lcd_send_data((uint8_t)character);
 
         divisor /= 10;
     }
@@ -621,6 +608,6 @@ void write_lcd(void) {
     lcd_write_text("PWM:");
     lcd_write_number(pwm_percent, 3);
 
-    lcd_write_text("% R:");
-    lcd_write_number(rpm, 5);
+    lcd_write_text("% RPM");
+    lcd_write_number(rpm > 9999u ? 9999u : rpm, 4);
 }

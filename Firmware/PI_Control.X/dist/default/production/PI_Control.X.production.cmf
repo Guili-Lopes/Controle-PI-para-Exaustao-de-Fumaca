@@ -1,0 +1,1170 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+init CODE 0 E E 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 8 1 1
+$dist/default/production\PI_Control.X.production.o
+cinit CODE 0 2012 2012 1E 1 2
+intcode_body CODE 0 1DF8 1DF8 66 1 2
+text0 CODE 0 1C94 1C94 88 1 2
+text1 CODE 0 1B3C 1B3C B4 1 2
+text2 CODE 0 1F54 1F54 2C 1 2
+text3 CODE 0 1BF0 1BF0 A4 1 2
+text4 CODE 0 1FA6 1FA6 24 1 2
+text5 CODE 0 1F80 1F80 26 1 2
+text6 CODE 0 1E5E 1E5E 64 1 2
+text7 CODE 0 1D1C 1D1C 72 1 2
+text8 CODE 0 1EC2 1EC2 4E 1 2
+text9 CODE 0 2030 2030 1C 1 2
+text10 CODE 0 204C 204C 1A 1 2
+text11 CODE 0 2078 2078 10 1 2
+text12 CODE 0 1D8E 1D8E 6A 1 2
+text13 CODE 0 1FCA 1FCA 24 1 2
+text14 CODE 0 2088 2088 8 1 2
+text15 CODE 0 2066 2066 12 1 2
+text16 CODE 0 1F10 1F10 44 1 2
+text17 CODE 0 1492 1492 21E 1 2
+text18 CODE 0 1A6E 1A6E CE 1 2
+text19 CODE 0 1FEE 1FEE 24 1 2
+text20 CODE 0 16B0 16B0 1B4 1 2
+text21 CODE 0 1104 1104 38E 1 2
+text22 CODE 0 1864 1864 106 1 2
+text23 CODE 0 CDE CDE 426 1 2
+text24 CODE 0 196A 196A 104 1 2
+text25 CODE 0 828 828 4B6 1 2
+cstackCOMRAM COMRAM 1 2 2 2D 1 1
+intcode CODE 0 8 8 6 1 2
+smallconst SMALLCONST 0 800 800 28 1 2
+bssCOMRAM COMRAM 1 2F 2F 22 1 1
+config CONFIG 4 300000 300000 8 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 12-7FF 1
+CONST 2090-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 2090-7FFF 1
+CODE 4-7 1
+CODE 12-7FF 1
+CODE 2090-7FFF 1
+BIGRAM 51-7FF 1
+BIGSFR F60-FFF 1
+COMRAM 51-5F 1
+CONFIG 300008-30000D 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 2090-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\PI_Control.X.production.o
+8 intcode CODE >6907:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+8 intcode CODE >402:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DF8 intcode_body CODE >402:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DFA intcode_body CODE >410:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E08 intcode_body CODE >413:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E0C intcode_body CODE >414:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E10 intcode_body CODE >417:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E12 intcode_body CODE >418:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E14 intcode_body CODE >419:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E16 intcode_body CODE >422:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E26 intcode_body CODE >423:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E28 intcode_body CODE >424:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E2C intcode_body CODE >428:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E3C intcode_body CODE >429:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E3E intcode_body CODE >430:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E42 intcode_body CODE >434:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E52 intcode_body CODE >435:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E54 intcode_body CODE >436:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E58 intcode_body CODE >441:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1E5A intcode_body CODE >442:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+828 text25 CODE >10:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+828 text25 CODE >21:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+82E text25 CODE >22:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+834 text25 CODE >23:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+842 text25 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+844 text25 CODE >28:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+854 text25 CODE >30:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+864 text25 CODE >32:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+874 text25 CODE >35:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+876 text25 CODE >37:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+878 text25 CODE >38:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+87C text25 CODE >41:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+88C text25 CODE >44:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+892 text25 CODE >46:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8A4 text25 CODE >47:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8A6 text25 CODE >49:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8AC text25 CODE >50:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8BA text25 CODE >51:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8BC text25 CODE >55:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8CC text25 CODE >57:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8DC text25 CODE >59:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8EC text25 CODE >62:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8EE text25 CODE >64:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8F0 text25 CODE >65:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+8F4 text25 CODE >68:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+904 text25 CODE >75:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+916 text25 CODE >77:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+924 text25 CODE >78:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+928 text25 CODE >81:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+92C text25 CODE >82:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+930 text25 CODE >83:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+934 text25 CODE >84:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+938 text25 CODE >85:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+93C text25 CODE >86:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+940 text25 CODE >87:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+944 text25 CODE >88:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+948 text25 CODE >89:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+94C text25 CODE >90:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+950 text25 CODE >91:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+954 text25 CODE >92:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+958 text25 CODE >93:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+95C text25 CODE >94:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+960 text25 CODE >95:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+964 text25 CODE >98:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+966 text25 CODE >100:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+990 text25 CODE >101:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9AC text25 CODE >102:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9BC text25 CODE >103:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9C0 text25 CODE >104:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9C4 text25 CODE >106:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9C4 text25 CODE >109:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9D2 text25 CODE >110:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9DA text25 CODE >111:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9DE text25 CODE >113:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9E2 text25 CODE >115:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9F0 text25 CODE >116:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9F2 text25 CODE >118:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9FC text25 CODE >119:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9FE text25 CODE >106:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+9FE text25 CODE >120:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A10 text25 CODE >121:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A10 text25 CODE >124:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A1E text25 CODE >127:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A2E text25 CODE >128:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A42 text25 CODE >132:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A52 text25 CODE >134:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A60 text25 CODE >135:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A6E text25 CODE >136:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A76 text25 CODE >137:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A7A text25 CODE >139:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A7E text25 CODE >141:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A8C text25 CODE >142:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A8E text25 CODE >144:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A98 text25 CODE >145:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+A9E text25 CODE >153:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+AC4 text25 CODE >154:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+AF4 text25 CODE >155:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+AF8 text25 CODE >156:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+AFA text25 CODE >157:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B0A text25 CODE >158:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B1A text25 CODE >162:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B2A text25 CODE >163:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B2A text25 CODE >166:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B50 text25 CODE >167:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B64 text25 CODE >172:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B6E text25 CODE >173:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B7C text25 CODE >174:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B7E text25 CODE >176:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B8C text25 CODE >177:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B90 text25 CODE >178:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B94 text25 CODE >180:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+B98 text25 CODE >182:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BA8 text25 CODE >183:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BAA text25 CODE >171:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BB8 text25 CODE >186:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BB8 text25 CODE >192:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BBA text25 CODE >193:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BC8 text25 CODE >194:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BDE text25 CODE >195:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BE2 text25 CODE >196:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BE6 text25 CODE >197:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BE6 text25 CODE >198:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BF8 text25 CODE >202:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+BF8 text25 CODE >203:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C08 text25 CODE >204:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C14 text25 CODE >205:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C22 text25 CODE >206:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C4C text25 CODE >207:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C5C text25 CODE >208:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C5E text25 CODE >215:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C7E text25 CODE >216:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C8E text25 CODE >218:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+C9E text25 CODE >219:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CA0 text25 CODE >221:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CA0 text25 CODE >225:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CAE text25 CODE >226:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CB0 text25 CODE >227:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CB4 text25 CODE >230:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CB6 text25 CODE >232:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CBC text25 CODE >233:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CCA text25 CODE >234:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CCC text25 CODE >236:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+CDC text25 CODE >237:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcadd.c
+196A text24 CODE >4:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+196A text24 CODE >7:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1998 text24 CODE >8:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+19A8 text24 CODE >9:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+19D6 text24 CODE >10:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+19E6 text24 CODE >12:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+19F4 text24 CODE >13:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A06 text24 CODE >14:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A14 text24 CODE >15:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A26 text24 CODE >16:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A36 text24 CODE >17:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A46 text24 CODE >18:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+1A6C text24 CODE >19:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\flge.c
+CDE text23 CODE >8:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+CDE text23 CODE >17:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+CE4 text23 CODE >18:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+CEA text23 CODE >19:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+CF8 text23 CODE >20:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+CFA text23 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D0A text23 CODE >26:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D1A text23 CODE >28:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D2A text23 CODE >31:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D2C text23 CODE >33:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D30 text23 CODE >36:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D40 text23 CODE >39:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D46 text23 CODE >40:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D4C text23 CODE >41:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D5A text23 CODE >42:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D5C text23 CODE >45:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D6C text23 CODE >48:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D7C text23 CODE >50:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D8C text23 CODE >53:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D8E text23 CODE >54:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+D92 text23 CODE >57:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DA2 text23 CODE >58:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DA2 text23 CODE >65:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DC2 text23 CODE >66:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DD6 text23 CODE >95:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DE2 text23 CODE >96:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DEC text23 CODE >97:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+DF6 text23 CODE >98:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E02 text23 CODE >99:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E0E text23 CODE >100:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E1A text23 CODE >101:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E26 text23 CODE >102:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E32 text23 CODE >103:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E3E text23 CODE >104:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E4C text23 CODE >105:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E58 text23 CODE >106:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E68 text23 CODE >107:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E74 text23 CODE >108:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E84 text23 CODE >109:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E92 text23 CODE >110:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+E9E text23 CODE >111:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+EAE text23 CODE >112:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+EBA text23 CODE >113:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+ECA text23 CODE >114:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+ED6 text23 CODE >115:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+EE6 text23 CODE >116:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+EF2 text23 CODE >117:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F1C text23 CODE >145:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F52 text23 CODE >146:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F60 text23 CODE >149:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F7A text23 CODE >152:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F7E text23 CODE >153:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F88 text23 CODE >154:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F96 text23 CODE >155:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F98 text23 CODE >156:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+F98 text23 CODE >157:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FA2 text23 CODE >158:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FA8 text23 CODE >152:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FB6 text23 CODE >163:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FB8 text23 CODE >164:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FC6 text23 CODE >165:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FF4 text23 CODE >166:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FF8 text23 CODE >167:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FFC text23 CODE >168:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+FFC text23 CODE >169:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+100E text23 CODE >173:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+100E text23 CODE >174:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+101E text23 CODE >175:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+102A text23 CODE >176:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1038 text23 CODE >177:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1062 text23 CODE >178:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1066 text23 CODE >183:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1080 text23 CODE >184:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1090 text23 CODE >185:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1094 text23 CODE >187:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10AE text23 CODE >188:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10BE text23 CODE >190:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10C0 text23 CODE >191:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10C4 text23 CODE >192:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10C4 text23 CODE >194:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10C8 text23 CODE >195:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10D8 text23 CODE >196:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10E6 text23 CODE >197:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10E8 text23 CODE >199:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10EE text23 CODE >201:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+10F2 text23 CODE >203:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1102 text23 CODE >205:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcmul.c
+1864 text22 CODE >43:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1864 text22 CODE >47:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+187A text22 CODE >48:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+188E text22 CODE >49:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18B8 text22 CODE >50:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18BA text22 CODE >51:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18CA text22 CODE >52:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18CE text22 CODE >53:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18DC text22 CODE >54:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18F4 text22 CODE >57:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+18FE text22 CODE >58:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1908 text22 CODE >60:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+191C text22 CODE >63:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1926 text22 CODE >64:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1928 text22 CODE >62:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1938 text22 CODE >67:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1948 text22 CODE >68:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1958 text22 CODE >69:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1968 text22 CODE >70:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\fltol.c
+1104 text21 CODE >11:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1104 text21 CODE >26:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+110A text21 CODE >27:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1110 text21 CODE >28:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+111E text21 CODE >29:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1120 text21 CODE >33:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1130 text21 CODE >35:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1140 text21 CODE >37:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1150 text21 CODE >40:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1152 text21 CODE >42:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1154 text21 CODE >43:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1158 text21 CODE >46:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1168 text21 CODE >49:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+116E text21 CODE >50:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1174 text21 CODE >51:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1182 text21 CODE >52:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1184 text21 CODE >56:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1194 text21 CODE >58:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11A4 text21 CODE >60:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11B4 text21 CODE >63:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11B6 text21 CODE >65:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11B8 text21 CODE >66:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11BC text21 CODE >69:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11CC text21 CODE >75:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11E2 text21 CODE >76:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11F2 text21 CODE >77:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11FA text21 CODE >78:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+11FE text21 CODE >79:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1212 text21 CODE >83:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1222 text21 CODE >84:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1222 text21 CODE >85:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1236 text21 CODE >89:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1250 text21 CODE >92:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1260 text21 CODE >93:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1270 text21 CODE >94:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1280 text21 CODE >96:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1282 text21 CODE >97:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1286 text21 CODE >100:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1296 text21 CODE >101:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12A0 text21 CODE >102:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12AA text21 CODE >103:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12B8 text21 CODE >104:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12BA text21 CODE >105:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12BA text21 CODE >106:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12C4 text21 CODE >112:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12E2 text21 CODE >115:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12E4 text21 CODE >116:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12F4 text21 CODE >118:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12F6 text21 CODE >97:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+12F6 text21 CODE >119:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1306 text21 CODE >122:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+131C text21 CODE >123:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1322 text21 CODE >128:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+132C text21 CODE >129:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+133A text21 CODE >130:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+133C text21 CODE >131:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+133C text21 CODE >132:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1346 text21 CODE >133:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+134C text21 CODE >127:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+135A text21 CODE >139:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+135C text21 CODE >140:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+136A text21 CODE >141:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1398 text21 CODE >142:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+139C text21 CODE >143:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13A0 text21 CODE >144:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13A0 text21 CODE >145:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13B2 text21 CODE >149:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13B2 text21 CODE >150:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13C2 text21 CODE >151:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13CE text21 CODE >152:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+13DC text21 CODE >153:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1406 text21 CODE >154:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+140A text21 CODE >159:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1424 text21 CODE >160:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+142A text21 CODE >161:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+143A text21 CODE >165:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1454 text21 CODE >166:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+145A text21 CODE >167:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+146A text21 CODE >169:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+146C text21 CODE >173:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1470 text21 CODE >175:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+147E text21 CODE >176:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1480 text21 CODE >177:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1484 text21 CODE >180:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1486 text21 CODE >182:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+1490 text21 CODE >185:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\sprcdiv.c
+16B0 text20 CODE >10:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+16B0 text20 CODE >15:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+16D0 text20 CODE >16:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1702 text20 CODE >17:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1706 text20 CODE >18:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1706 text20 CODE >19:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1716 text20 CODE >21:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+172C text20 CODE >22:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1740 text20 CODE >23:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1744 text20 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1748 text20 CODE >25:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+174A text20 CODE >26:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1754 text20 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1786 text20 CODE >29:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1788 text20 CODE >30:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1794 text20 CODE >31:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+179E text20 CODE >28:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+179E text20 CODE >32:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+17D0 text20 CODE >34:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+17D2 text20 CODE >35:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+17DC text20 CODE >33:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+17FA text20 CODE >37:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1808 text20 CODE >38:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+180A text20 CODE >39:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+180E text20 CODE >40:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1832 text20 CODE >41:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1850 text20 CODE >42:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1852 text20 CODE >43:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1862 text20 CODE >44:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\xxtofl.c
+1FEE text19 CODE >387:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FF0 text19 CODE >388:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FF4 text19 CODE >389:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FF6 text19 CODE >390:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2004 text19 CODE >392:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2010 text19 CODE >393:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1A6E text18 CODE >370:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1A6E text18 CODE >372:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1A7C text18 CODE >375:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1A8A text18 CODE >378:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1A96 text18 CODE >379:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1AC0 text18 CODE >380:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1AEE text18 CODE >381:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B3A text18 CODE >382:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1492 text17 CODE >447:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1492 text17 CODE >449:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1496 text17 CODE >452:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+14EE text17 CODE >453:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1522 text17 CODE >457:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1564 text17 CODE >458:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+15A6 text17 CODE >462:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+160E text17 CODE >465:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1650 text17 CODE >466:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+166E text17 CODE >468:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+16AE text17 CODE >469:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F10 text16 CODE >474:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F10 text16 CODE >481:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F14 text16 CODE >482:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F18 text16 CODE >484:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F24 text16 CODE >486:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F30 text16 CODE >487:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F38 text16 CODE >490:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F52 text16 CODE >491:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2066 text15 CODE >252:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2066 text15 CODE >253:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2068 text15 CODE >254:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+206A text15 CODE >259:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+206E text15 CODE >265:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2072 text15 CODE >271:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2076 text15 CODE >272:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2088 text14 CODE >349:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2088 text14 CODE >351:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+208A text14 CODE >358:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+208E text14 CODE >359:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FCA text13 CODE >515:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FCA text13 CODE >517:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FCE text13 CODE >518:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FD0 text13 CODE >520:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FD4 text13 CODE >522:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FDA text13 CODE >524:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FDC text13 CODE >525:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FE2 text13 CODE >526:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FE4 text13 CODE >528:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FEC text13 CODE >529:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D8E text12 CODE >321:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D8E text12 CODE >323:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D90 text12 CODE >324:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D92 text12 CODE >325:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D94 text12 CODE >327:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DA2 text12 CODE >330:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DA8 text12 CODE >331:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DB8 text12 CODE >333:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DBE text12 CODE >334:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DC4 text12 CODE >336:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DCA text12 CODE >338:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DD0 text12 CODE >339:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DD6 text12 CODE >340:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DDC text12 CODE >341:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DEA text12 CODE >342:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DF0 text12 CODE >343:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1DF6 text12 CODE >344:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2078 text11 CODE >277:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2078 text11 CODE >278:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+207A text11 CODE >279:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+207C text11 CODE >283:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2080 text11 CODE >286:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2082 text11 CODE >290:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2086 text11 CODE >291:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+204C text10 CODE >232:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+204C text10 CODE >234:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2050 text10 CODE >238:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2052 text10 CODE >239:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2054 text10 CODE >242:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2058 text10 CODE >243:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+205C text10 CODE >244:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2060 text10 CODE >245:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2062 text10 CODE >246:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2064 text10 CODE >247:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2030 text9 CODE >296:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2030 text9 CODE >300:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2032 text9 CODE >301:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2034 text9 CODE >302:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2038 text9 CODE >305:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+203A text9 CODE >307:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+203E text9 CODE >313:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2042 text9 CODE >314:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2046 text9 CODE >315:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+204A text9 CODE >316:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1EC2 text8 CODE >496:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1EC2 text8 CODE >498:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1EE0 text8 CODE >501:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1EF8 text8 CODE >508:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F0E text8 CODE >509:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D1C text7 CODE >7:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D1C text7 CODE >13:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D22 text7 CODE >14:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D34 text7 CODE >15:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D38 text7 CODE >16:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D3C text7 CODE >17:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D42 text7 CODE >18:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D44 text7 CODE >16:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D52 text7 CODE >21:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D58 text7 CODE >22:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D6E text7 CODE >23:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D76 text7 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D78 text7 CODE >26:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D7E text7 CODE >27:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D84 text7 CODE >28:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D84 text7 CODE >29:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1D8C text7 CODE >30:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwdiv.c
+1E5E text6 CODE >7:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E5E text6 CODE >12:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E70 text6 CODE >13:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E74 text6 CODE >14:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E78 text6 CODE >15:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E7E text6 CODE >16:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E80 text6 CODE >14:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1E8E text6 CODE >19:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EA4 text6 CODE >20:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EAC text6 CODE >21:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EB2 text6 CODE >22:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EB8 text6 CODE >23:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EB8 text6 CODE >24:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1EC0 text6 CODE >25:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\lwmod.c
+1F80 text5 CODE >15:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1F80 text5 CODE >37:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1F8C text5 CODE >38:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1F94 text5 CODE >39:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1F9C text5 CODE >52:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1FA4 text5 CODE >53:C:\Program Files\Microchip\xc8\v4.00\pic\sources\c99\common\Umul16.c
+1FA6 text4 CODE >534:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FA6 text4 CODE >536:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FAA text4 CODE >537:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FAC text4 CODE >539:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FB0 text4 CODE >541:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FB6 text4 CODE >543:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FB8 text4 CODE >544:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FBE text4 CODE >545:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FC0 text4 CODE >547:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1FC8 text4 CODE >548:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BF0 text3 CODE >566:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BF0 text3 CODE >568:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BF6 text3 CODE >572:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BFE text3 CODE >573:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C18 text3 CODE >572:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C30 text3 CODE >577:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C5A text3 CODE >578:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C60 text3 CODE >579:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C66 text3 CODE >581:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C80 text3 CODE >576:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C92 text3 CODE >583:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F54 text2 CODE >554:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F54 text2 CODE >556:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F58 text2 CODE >557:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F64 text2 CODE >558:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F66 text2 CODE >556:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1F7E text2 CODE >560:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B3C text1 CODE >589:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B3C text1 CODE >594:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B5A text1 CODE >597:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B60 text1 CODE >599:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B68 text1 CODE >600:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B78 text1 CODE >602:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B80 text1 CODE >603:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B90 text1 CODE >606:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B96 text1 CODE >608:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1B9E text1 CODE >609:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BAC text1 CODE >611:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BB4 text1 CODE >612:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1BEE text1 CODE >613:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C94 text0 CODE >183:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C94 text0 CODE >184:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C98 text0 CODE >185:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1C9C text0 CODE >186:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CA0 text0 CODE >187:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CA4 text0 CODE >188:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CA8 text0 CODE >189:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CAC text0 CODE >193:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CBC text0 CODE >194:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CBE text0 CODE >195:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CC2 text0 CODE >196:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CC6 text0 CODE >200:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CD6 text0 CODE >201:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CD8 text0 CODE >202:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CDC text0 CODE >206:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CEC text0 CODE >207:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CEE text0 CODE >208:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1CF2 text0 CODE >211:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D08 text0 CODE >212:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D0A text0 CODE >213:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D0C text0 CODE >214:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D10 text0 CODE >215:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+1D12 text0 CODE >216:C:\Users\guiga\OneDrive\Documentos\Projeto Micro\Firmware\PI_Control.X\main.c
+2012 cinit CODE >646:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2012 cinit CODE >648:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2012 cinit CODE >651:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2012 cinit CODE >704:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2016 cinit CODE >705:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2018 cinit CODE >706:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2018 cinit CODE >707:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+201A cinit CODE >708:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+201C cinit CODE >709:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+201E cinit CODE >715:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+201E cinit CODE >717:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2020 cinit CODE >718:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2022 cinit CODE >720:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2024 cinit CODE >721:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2026 cinit CODE >722:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+2028 cinit CODE >723:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+202A cinit CODE >724:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+202C cinit CODE >725:C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwmod@counter D 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PI_Control.X.production.o
+_read_adc_channel 1FEE 0 CODE 0 text19 dist/default/production\PI_Control.X.production.o
+__Hspace_0 2090 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hspace_1 51 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hspace_4 600008 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+write_lcd@pwm_percent 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+lcd_write_number@character 12 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PI_Control.X.production.o
+__mediumconst 800 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PI_Control.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\PI_Control.X.production.o
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+__end_of_set_pwm_duty_cycle 1F10 0 CODE 0 text8 dist/default/production\PI_Control.X.production.o
+_LATD F8C 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TMR2 FCC 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+_main 1C94 0 CODE 0 text0 dist/default/production\PI_Control.X.production.o
+btemp 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___stack_lo 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+start E 0 CODE 0 init C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+lcd_write_text@text 3 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@aexp 13 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@bexp 14 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@prod 15 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@sign E 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@temp 19 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PI_Control.X.production.o
+process_interrupts@ticks_pi 4D 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+?___wmul 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_lcd_write_text 1F80 0 CODE 0 text2 dist/default/production\PI_Control.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\PI_Control.X.production.o
+calculate_rpm@previous_count 3F 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+intlevel0 0 0 CODE 0 text C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+intlevel1 0 0 CODE 0 text C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+intlevel2 0 0 CODE 0 text C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+intlevel3 0 0 CODE 0 text C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_set_pwm_duty_cycle 1EC2 0 CODE 0 text8 dist/default/production\PI_Control.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PI_Control.X.production.o
+calculate_rpm@current_count 8 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\PI_Control.X.production.o
+_sensor_value 47 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\PI_Control.X.production.o
+_lcd_send_command 1FCA 0 CODE 0 text13 dist/default/production\PI_Control.X.production.o
+___wmul@multiplicand 4 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_read_adc_channel 2012 0 CODE 0 text19 dist/default/production\PI_Control.X.production.o
+_ADCON0 FC2 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_ADCON1 FC1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_ADCON2 FC0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_ADRESH FC4 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_ADRESL FC3 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+_proportional 37 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_CCPR1L FBE 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PI_Control.X.production.o
+__end_of___flge 1A6E 0 CODE 0 text24 dist/default/production\PI_Control.X.production.o
+__end_of___wmul 1FA6 0 CODE 0 text5 dist/default/production\PI_Control.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PI_Control.X.production.o
+_integral 33 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@aexp 28 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@bexp 27 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@sign 20 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PI_Control.X.production.o
+__Hintcodelo 18 0 CODE 0 intcodelo dist/default/production\PI_Control.X.production.o
+_lcd_write_number 1BF0 0 CODE 0 text3 dist/default/production\PI_Control.X.production.o
+___lwmod@divisor B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of___fladd CDE 0 CODE 0 text25 dist/default/production\PI_Control.X.production.o
+__end_of___fldiv 1492 0 CODE 0 text21 dist/default/production\PI_Control.X.production.o
+__end_of___flmul 1104 0 CODE 0 text23 dist/default/production\PI_Control.X.production.o
+__end_of___fltol 196A 0 CODE 0 text22 dist/default/production\PI_Control.X.production.o
+__end_of___lwdiv 1D8E 0 CODE 0 text7 dist/default/production\PI_Control.X.production.o
+__end_of___lwmod 1EC2 0 CODE 0 text6 dist/default/production\PI_Control.X.production.o
+_calculate_rpm 1F10 0 CODE 0 text16 dist/default/production\PI_Control.X.production.o
+_INTCON FF2 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___lwdiv@quotient 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fladd@a 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fladd@b 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@a 14 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@b 10 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+_write_lcd$576 18 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@a 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@b 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___lwmod@dividend 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\PI_Control.X.production.o
+start_initialization 2012 0 CODE 0 cinit dist/default/production\PI_Control.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PI_Control.X.production.o
+lcd_send_data@data 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_config_interrupts 2090 0 CODE 0 text14 dist/default/production\PI_Control.X.production.o
+_TRISAbits F92 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISCbits F94 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__end_of_Ki 809 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+__end_of_Kp 811 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+__end_of_Ts 805 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+_config_timers 2030 0 CODE 0 text9 dist/default/production\PI_Control.X.production.o
+__end_of_lcd_send_command 1FEE 0 CODE 0 text13 dist/default/production\PI_Control.X.production.o
+calculate_rpm@timer1_high 7 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\PI_Control.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\PI_Control.X.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\PI_Control.X.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\PI_Control.X.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\PI_Control.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\PI_Control.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\PI_Control.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\PI_Control.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\PI_Control.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\PI_Control.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\PI_Control.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\PI_Control.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\PI_Control.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\PI_Control.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\PI_Control.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\PI_Control.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\PI_Control.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\PI_Control.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\PI_Control.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\PI_Control.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\PI_Control.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\PI_Control.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\PI_Control.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\PI_Control.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\PI_Control.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\PI_Control.X.production.o
+___lwdiv@counter 8 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PI_Control.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\PI_Control.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\PI_Control.X.production.o
+__smallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+lcd_write_number@divisor 14 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___xxtofl@arg C 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___xxtofl@exp B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___xxtofl@val 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_lcd_write_number 1C94 0 CODE 0 text3 dist/default/production\PI_Control.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\PI_Control.X.production.o
+__Hconfig 300008 0 CONFIG 4 config dist/default/production\PI_Control.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\PI_Control.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\PI_Control.X.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\PI_Control.X.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\PI_Control.X.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\PI_Control.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\PI_Control.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\PI_Control.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\PI_Control.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\PI_Control.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\PI_Control.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\PI_Control.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\PI_Control.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\PI_Control.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\PI_Control.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\PI_Control.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\PI_Control.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\PI_Control.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\PI_Control.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\PI_Control.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\PI_Control.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\PI_Control.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\PI_Control.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\PI_Control.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\PI_Control.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\PI_Control.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\PI_Control.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\PI_Control.X.production.o
+__end_of_process_interrupts 1E5E 0 CODE 0 intcode_body dist/default/production\PI_Control.X.production.o
+calculate_rpm@pulse_count 4 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flmul@grs F 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\PI_Control.X.production.o
+_calculate_pi 1492 0 CODE 0 text17 dist/default/production\PI_Control.X.production.o
+_INTCONbits FF2 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\PI_Control.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\PI_Control.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\PI_Control.X.production.o
+__Hinit 12 0 CODE 0 init dist/default/production\PI_Control.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\PI_Control.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\PI_Control.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\PI_Control.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\PI_Control.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\PI_Control.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\PI_Control.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\PI_Control.X.production.o
+__Linit E 0 CODE 0 init dist/default/production\PI_Control.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\PI_Control.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\PI_Control.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\PI_Control.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\PI_Control.X.production.o
+___flge 196A 0 CODE 0 text24 dist/default/production\PI_Control.X.production.o
+___wmul 1F80 0 CODE 0 text5 dist/default/production\PI_Control.X.production.o
+int$flags 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production\PI_Control.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\PI_Control.X.production.o
+_PR2 FCB 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__S0 2090 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__S1 51 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_rpm 41 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_pwm_duty_cycle 43 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+process_interrupts@ticks_lcd 4C 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+process_interrupts@ticks_rpm 4B 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_calculate_pi$1370 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?_read_adc_channel 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+_config_interrupts 2088 0 CODE 0 text14 dist/default/production\PI_Control.X.production.o
+_error_norm 3B 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PI_Control.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\PI_Control.X.production.o
+___xxtofl 16B0 0 CODE 0 text20 dist/default/production\PI_Control.X.production.o
+_process_interrupts 8 0 CODE 0 intcode dist/default/production\PI_Control.X.production.o
+__end_of_calculate_rpm 1F54 0 CODE 0 text16 dist/default/production\PI_Control.X.production.o
+__end_of_anti_windup 80D 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+int_func 1DF8 0 CODE 0 intcode_body dist/default/production\PI_Control.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production\PI_Control.X.production.o
+_config_regs 204C 0 CODE 0 text10 dist/default/production\PI_Control.X.production.o
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\PI_Control.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\PI_Control.X.production.o
+__end_of___xxtofl 1864 0 CODE 0 text20 dist/default/production\PI_Control.X.production.o
+_control_output 2F 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__activetblptr 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\PI_Control.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\PI_Control.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\PI_Control.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\PI_Control.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\PI_Control.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\PI_Control.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\PI_Control.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\PI_Control.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\PI_Control.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\PI_Control.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\PI_Control.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\PI_Control.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\PI_Control.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\PI_Control.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\PI_Control.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\PI_Control.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\PI_Control.X.production.o
+_lcd_send_data 1FA6 0 CODE 0 text4 dist/default/production\PI_Control.X.production.o
+___fladd@signs 27 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__ptext10 204C 0 CODE 0 text10 dist/default/production\PI_Control.X.production.o
+__ptext11 2078 0 CODE 0 text11 dist/default/production\PI_Control.X.production.o
+__ptext12 1D8E 0 CODE 0 text12 dist/default/production\PI_Control.X.production.o
+__ptext13 1FCA 0 CODE 0 text13 dist/default/production\PI_Control.X.production.o
+__ptext14 2088 0 CODE 0 text14 dist/default/production\PI_Control.X.production.o
+__ptext15 2066 0 CODE 0 text15 dist/default/production\PI_Control.X.production.o
+__ptext16 1F10 0 CODE 0 text16 dist/default/production\PI_Control.X.production.o
+__ptext17 1492 0 CODE 0 text17 dist/default/production\PI_Control.X.production.o
+__ptext18 1A6E 0 CODE 0 text18 dist/default/production\PI_Control.X.production.o
+__ptext19 1FEE 0 CODE 0 text19 dist/default/production\PI_Control.X.production.o
+__ptext20 16B0 0 CODE 0 text20 dist/default/production\PI_Control.X.production.o
+__ptext21 1104 0 CODE 0 text21 dist/default/production\PI_Control.X.production.o
+__ptext22 1864 0 CODE 0 text22 dist/default/production\PI_Control.X.production.o
+__ptext23 CDE 0 CODE 0 text23 dist/default/production\PI_Control.X.production.o
+__ptext24 196A 0 CODE 0 text24 dist/default/production\PI_Control.X.production.o
+__ptext25 828 0 CODE 0 text25 dist/default/production\PI_Control.X.production.o
+___fladd 828 0 CODE 0 text25 dist/default/production\PI_Control.X.production.o
+___fldiv 1104 0 CODE 0 text21 dist/default/production\PI_Control.X.production.o
+___flmul CDE 0 CODE 0 text23 dist/default/production\PI_Control.X.production.o
+___fltol 1864 0 CODE 0 text22 dist/default/production\PI_Control.X.production.o
+__pintcode_body 1DF8 0 CODE 0 intcode_body dist/default/production\PI_Control.X.production.o
+___lwdiv 1D1C 0 CODE 0 text7 dist/default/production\PI_Control.X.production.o
+___lwmod 1E5E 0 CODE 0 text6 dist/default/production\PI_Control.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PI_Control.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\PI_Control.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\PI_Control.X.production.o
+__end_of_calculate_pi 16B0 0 CODE 0 text17 dist/default/production\PI_Control.X.production.o
+__end_of_config_timers 204C 0 CODE 0 text9 dist/default/production\PI_Control.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\PI_Control.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\PI_Control.X.production.o
+___wmul@multiplier 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+_LATBbits F8A 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_LATCbits F8B 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_LATEbits F8D 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___fldiv@grs 23 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fldiv@rem 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\PI_Control.X.production.o
+__Lsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\PI_Control.X.production.o
+_config_adc 2066 0 CODE 0 text15 dist/default/production\PI_Control.X.production.o
+_config_lcd 1D8E 0 CODE 0 text12 dist/default/production\PI_Control.X.production.o
+_config_pwm 2078 0 CODE 0 text11 dist/default/production\PI_Control.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PI_Control.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___lwdiv@divisor 4 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\PI_Control.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+_read_adc 1A6E 0 CODE 0 text18 dist/default/production\PI_Control.X.production.o
+___fldiv@new_exp 21 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_write_lcd 1BF0 0 CODE 0 text1 dist/default/production\PI_Control.X.production.o
+stackhi 0 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+stacklo 0 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+__Lintcode 8 0 CODE 0 intcode dist/default/production\PI_Control.X.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production\PI_Control.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\PI_Control.X.production.o
+_ADCON0bits FC2 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___fladd@grs 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_read_adc 1B3C 0 CODE 0 text18 dist/default/production\PI_Control.X.production.o
+_flag_lcd 4F 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_flag_rpm 4E 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+lcd_write_number@digit 11 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+lcd_write_number@value E 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__pbssCOMRAM 2F 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+___flge@ff1 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___flge@ff2 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fltol@exp1 24 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+_write_lcd 1B3C 0 CODE 0 text1 dist/default/production\PI_Control.X.production.o
+end_of_initialization 201E 0 CODE 0 cinit dist/default/production\PI_Control.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\PI_Control.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production\PI_Control.X.production.o
+_RCONbits FD0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+lcd_send_command@command 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___lwdiv@dividend 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___fladd 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___fldiv 10 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___flmul 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___fltol 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___lwdiv 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+?___lwmod 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\PI_Control.X.production.o
+_setpoint 49 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\PI_Control.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\PI_Control.X.production.o
+__pcinit 2012 0 CODE 0 cinit dist/default/production\PI_Control.X.production.o
+__ptext0 1C94 0 CODE 0 text0 dist/default/production\PI_Control.X.production.o
+__ptext1 1B3C 0 CODE 0 text1 dist/default/production\PI_Control.X.production.o
+__ptext2 1F54 0 CODE 0 text2 dist/default/production\PI_Control.X.production.o
+__ptext3 1BF0 0 CODE 0 text3 dist/default/production\PI_Control.X.production.o
+__ptext4 1FA6 0 CODE 0 text4 dist/default/production\PI_Control.X.production.o
+__ptext5 1F80 0 CODE 0 text5 dist/default/production\PI_Control.X.production.o
+__ptext6 1E5E 0 CODE 0 text6 dist/default/production\PI_Control.X.production.o
+__ptext7 1D1C 0 CODE 0 text7 dist/default/production\PI_Control.X.production.o
+__ptext8 1EC2 0 CODE 0 text8 dist/default/production\PI_Control.X.production.o
+__ptext9 2030 0 CODE 0 text9 dist/default/production\PI_Control.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\PI_Control.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\PI_Control.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\PI_Control.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\PI_Control.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\PI_Control.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\PI_Control.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\PI_Control.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\PI_Control.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\PI_Control.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\PI_Control.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\PI_Control.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\PI_Control.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\PI_Control.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\PI_Control.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\PI_Control.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\PI_Control.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\PI_Control.X.production.o
+__end_of_config_adc 2078 0 CODE 0 text15 dist/default/production\PI_Control.X.production.o
+__end_of_config_lcd 1DF8 0 CODE 0 text12 dist/default/production\PI_Control.X.production.o
+__end_of_config_pwm 2088 0 CODE 0 text11 dist/default/production\PI_Control.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\PI_Control.X.production.o
+?___xxtofl 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PI_Control.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\PI_Control.X.production.o
+___fladd@aexp 28 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fladd@bexp 29 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___fltol@sign1 23 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+read_adc_channel@adc_config 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\PI_Control.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___heap_lo 0 0 ABS 0 - C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___fltol@f1 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_7.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PI_Control.X.production.o
+_flag_pi 50 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of__initialization 201E 0 CODE 0 cinit dist/default/production\PI_Control.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\PI_Control.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\PI_Control.X.production.o
+__end_of_lcd_send_data 1FCA 0 CODE 0 text4 dist/default/production\PI_Control.X.production.o
+__pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+lcd_write_number@i 13 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_main 1D1C 0 CODE 0 text0 dist/default/production\PI_Control.X.production.o
+__pintcode 8 0 CODE 0 intcode dist/default/production\PI_Control.X.production.o
+_CMCON FB4 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_T0CON FD5 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_T1CON FCD 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_T2CON FCA 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TMR0H FD7 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TMR0L FD6 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TMR1H FCF 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TMR1L FCE 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISA F92 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISB F93 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISC F94 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISD F95 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+_TRISE F96 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\PI_Control.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\PI_Control.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\PI_Control.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\PI_Control.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\PI_Control.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\PI_Control.X.production.o
+_error 45 0 COMRAM 1 bssCOMRAM dist/default/production\PI_Control.X.production.o
+_CCP1CON FBD 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+calculate_rpm@timer1_low 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\PI_Control.X.production.o
+__Hsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\PI_Control.X.production.o
+__initialization 2012 0 CODE 0 cinit dist/default/production\PI_Control.X.production.o
+btemp0 1 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+btemp1 2 0 ABS 0 - dist/default/production\PI_Control.X.production.o
+___xxtofl@sign A 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__end_of_config_regs 2066 0 CODE 0 text10 dist/default/production\PI_Control.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\PI_Control.X.production.o
+___wmul@product 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hsmallconst 828 0 SMALLCONST 0 smallconst dist/default/production\PI_Control.X.production.o
+_lcd_write_text 1F54 0 CODE 0 text2 dist/default/production\PI_Control.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\PI_Control.X.production.o
+lcd_write_number@digits 10 0 COMRAM 1 cstackCOMRAM dist/default/production\PI_Control.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PI_Control.X.production.o
+__Hintcode E 0 CODE 0 intcode dist/default/production\PI_Control.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 1 1
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text25 0 828 828 1868 1
+cstackCOMRAM 1 2 2 4F 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 A 1
+smallconst 0 800 800 28 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
