@@ -1884,7 +1884,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 73.9648 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -1963,7 +1963,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 137.16 61.468 90)
 			(hide yes)
 			(show_name no)
@@ -2434,7 +2434,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
 			(at 156.21 52.07 0)
 			(hide yes)
 			(show_name no)

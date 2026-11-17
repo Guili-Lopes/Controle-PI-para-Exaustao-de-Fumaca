@@ -2575,7 +2575,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
 			(at 33.02 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -2657,7 +2657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 170.942 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -2821,7 +2821,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
 			(at 83.5152 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -3070,7 +3070,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open"
 			(at 48.26 60.452 90)
 			(hide yes)
 			(show_name no)
@@ -3152,7 +3152,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 172.72 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -3401,7 +3401,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
 			(at 147.0152 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -4129,7 +4129,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_THT:L_Radial_D18.0mm_P10.00mm"
 			(at 135.89 66.04 0)
 			(hide yes)
 			(show_name no)
