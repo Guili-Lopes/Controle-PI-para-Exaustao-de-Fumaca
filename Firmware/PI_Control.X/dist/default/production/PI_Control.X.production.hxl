@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o
+ C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o
  -Odist/default/production\PI_Control.X.production.hex
  -logfile=dist/default/production\PI_Control.X.production.hxl
  -addressing=1
@@ -9,21 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
-  8h - 11h		(C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
-  800h - 826h		(C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
-  828h - 208Fh		(C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
-  300000h - 300007h		(C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
+  0h - 3h		(C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o)
+  8h - 11h		(C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o)
+  800h - 2063h		(C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o)
+  300000h - 300007h		(C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   12h - 7FFh
-  827h - 827h
-  2090h - 2FFFFFh
+  2064h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\guiga\AppData\Local\Temp\xcAsxxo.0\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\guiga\AppData\Local\Temp\xcAs161g.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -32,7 +30,7 @@
 ----------------------------------------------------------
 00000800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000820 | H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1
+00000820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -420,9 +418,7 @@
 00002030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002060 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 00300010 | --

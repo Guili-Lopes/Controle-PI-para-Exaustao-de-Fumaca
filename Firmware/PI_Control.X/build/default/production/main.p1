@@ -1677,7 +1677,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 606:     lcd_send_command(0b11000000);
 [e ( _lcd_send_command (1 -> -> 192 `i `uc ]
 "608
-[; ;main.c: 608:     lcd_write_text("PWM:");
+[; ;main.c: 608:     lcd_write_text("PWM");
 [e ( _lcd_write_text (1 :s 3C ]
 "609
 [; ;main.c: 609:     lcd_write_number(pwm_percent, 3);
@@ -1686,13 +1686,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 611:     lcd_write_text("% RPM");
 [e ( _lcd_write_text (1 :s 4C ]
 "612
-[; ;main.c: 612:     lcd_write_number(rpm > 9999u ? 9999u : rpm, 4);
-[e ( _lcd_write_number (2 , -> ? > -> _rpm `ui -> 9999 `ui : -> 9999 `ui -> _rpm `ui `us -> -> 4 `i `uc ]
+[; ;main.c: 612:     lcd_write_number(rpm, 5);
+[e ( _lcd_write_number (2 , _rpm -> -> 5 `i `uc ]
 "613
 [; ;main.c: 613: }
 [e :UE 438 ]
 }
+[a 3C 80 87 77 0 ]
 [a 4C 37 32 82 80 77 0 ]
 [a 2C 32 77 81 58 0 ]
-[a 3C 80 87 77 58 0 ]
 [a 1C 82 69 70 58 0 ]

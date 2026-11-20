@@ -6388,9 +6388,9 @@ void write_lcd(void) {
 
     lcd_send_command(0b11000000);
 
-    lcd_write_text("PWM:");
+    lcd_write_text("PWM");
     lcd_write_number(pwm_percent, 3);
 
     lcd_write_text("% RPM");
-    lcd_write_number(rpm > 9999u ? 9999u : rpm, 4);
+    lcd_write_number(rpm, 5);
 }

@@ -53,7 +53,6 @@
 
 // Oscilador principal HS a 20 MHz, sem PLL aplicado a CPU
 #pragma config FOSC = HS
-#pragma config PLLDIV = 5
 #pragma config CPUDIV = OSC1_PLL2
 
 // Recursos gerais
